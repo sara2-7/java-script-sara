@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sara Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <header>
+
+   <h1 class="title2">
+    <a href="products.html">Sara Store</a>
+</h1>
+
+    <nav class="nav1">
+
+        <ul id="links">
+
+            
+            <li id="loginLink">
+                <a href="login.html">Login</a>
+            </li>
+
+            <li id="registerLink">
+                <a href="register.html">Register</a>
+            </li>
+
+            
+            <li id="welcomeUser" style="display: none;">
+               Hello ,<span id="userName"></span>
+            </li>
+
+         <li id="cartLink" style="display: none; position: relative;">
+
+   <button type="button" id="openCart" class="cart-button">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cartCount">0</span>
+</button>
+
+    <!-- Cart Popup -->
+    <div id="cartPopup" class="cart-popup">
+
+        <div class="cart-popup-content" id="cartPopupItems">
+        </div>
+
+        <button class="view-products-btn" onclick="window.location.href='cart.html'">
+            View All Products
+        </button>
+
+    </div>
+
+</li>
+
+            <li id="logoutLink" style="display: none;">
+                <a href="#" onclick="logout()">Logout</a>
+            </li>
+
+           
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+    <main>
+        <div class="container">
+<div class="search-container">
+  <div class="search-container2">
+
+        <select id="searchType">
+    <option value="name">Search by Product Name</option>
+    <option value="category">Search by Category</option>
+</select>
+
+<input type="text" id="searchInput" placeholder="Search...">
+
+<button class="search-btn" onclick="searchProducts()">Search</button>
+</div>
+
+</div>
+
+        <div class="products-container" id="products">
+
+</div>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

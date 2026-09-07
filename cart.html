@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+ <header>
+
+   <h1 class="title2">
+    <a href="products.html">Sara Store</a>
+</h1>
+
+    <nav class="nav1">
+
+        <ul id="links">
+
+           
+            <li id="loginLink">
+                <a href="login.html">Login</a>
+            </li>
+
+            <li id="registerLink">
+                <a href="register.html">Register</a>
+            </li>
+
+           
+            <li id="welcomeUser" style="display: none;">
+               Hello ,<span id="userName"></span>
+            </li>
+
+         <li id="cartLink" style="display: none; position: relative;">
+
+   <button type="button" id="openCart" class="cart-button">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cartCount">0</span>
+</button>
+
+   
+    <div id="cartPopup" class="cart-popup">
+
+        <div class="cart-popup-content" id="cartPopupItems">
+        </div>
+
+        <button class="view-products-btn" onclick="window.location.href='cart.html'">
+            View All Products
+        </button>
+
+    </div>
+
+</li>
+
+            <li id="logoutLink" style="display: none;">
+                <a href="#" onclick="logout()">Logout</a>
+            </li>
+
+           
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main class="cart-page">
+
+   
+
+    <section class="cart-section">
+
+        <h2>Cart Items</h2>
+
+        <div id="cart" class="cart-items">
+
+        </div>
+
+        <div class="total-price">
+            Total Price: $<span id="totalPrice">0.00</span>
+        </div>
+
+    </section>
+
+
+    
+
+    <section class="favorites-section">
+
+        <h2 class="favorite-title">Favorite Items</h2>
+
+        <div id="favorites" class="favorite-items">
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
